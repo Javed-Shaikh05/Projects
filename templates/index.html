@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Region Selector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+    <form id="myForm" method="POST" action="/save_data" onsubmit="return validateForm()">
+        
+        <h2 class="mb-4">Inventory Details</h2>
+        <br>
+        <label for="region">Select Region:</label>
+        <select id="region" onchange="getRegionData()">
+        <option value="North">North</option>
+        <option value="South">South</option>
+        <option value="East">East</option>
+        <option value="West">West</option>
+        </select>
+
+        <label for="state">Select State:</label>
+        <select id="state" onchange="getStateData()" required></select>
+        <br>
+
+        <label for="city">Select City:</label>
+        <select id="city" onchange="getCityData()" required></select>
+        <br>
+
+        <label for="cinema">Select Cinema:</label>
+        <select id="cinema" required></select>
+        <br>
+        <label for="lobbyscreens">Total Lobby Screens(Cinema):</label>
+        <select id="lobbyscreens" name="lobbyscreens" required></select>
+        <br>
+
+        <label for="screens">Number of Lobby Screens(Screenox):</label>
+        <select id="screens" name="screens" required></select>
+        <br>
+
+        <button type="button"  onclick="redirectToCapturePage()">Submit</button>
+</form>
+
+        <script src="{{ url_for('static', filename='index.js') }}"></script>
+        
+</body>
+</html>

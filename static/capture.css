@@ -1,0 +1,104 @@
+body {
+    background-color: #f0f2f5;
+    font-family: 'Roboto', sans-serif; 
+    color: #333; 
+    padding: 20px; 
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto; 
+    background-color: #ffffff; 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+}
+
+h2 {
+    color: #2d3f5a; 
+    margin-bottom: 20px; 
+}
+
+.screen-box {
+    background-color: #f8f9fa; 
+    border: 1px solid #dee2e6; 
+    border-radius: 5px; 
+    padding: 15px; 
+    margin-bottom: 20px; 
+}
+
+label {
+    font-weight: 600; 
+    margin-bottom: 5px; 
+    display: block; 
+}
+
+input[type="file"] {
+    display: block; 
+    margin-top: 5px; 
+    margin-bottom: 10px;
+}
+
+.preview-image {
+    max-width: 100%; 
+    height: auto;
+    margin-top: 10px;
+    border-radius: 5px 5px 0 0; 
+}
+
+.image-stamp {
+    background-color: rgba(0,0,0,0.75); /* Dark background for text */
+    color: white; /* White text */
+    padding: 5px; /* Padding around text */
+    
+    font-size: 14px; /* Slightly larger font size */
+}
+
+.btn-primary {
+    background-color: #f22358; /* Brand color for primary buttons */
+    color: #ffffff; /* White text on buttons */
+    border: none; /* No border */
+    padding: 10px 15px; /* Padding inside buttons */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Larger font size for buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.btn-primary:hover {
+    background-color: #f22358; /* Slightly darker color on hover */
+}
+
+.content {
+    display: none; /* Start with content collapsed */
+}
+
+.toggle-arrow {
+    cursor: pointer;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .toggle-arrow {
+    cursor: pointer;
+}
+
+/* Adjust the size of the icons, if necessary */
+.header i.fas {
+    font-size: 1.25rem; /* Example size */
+}
+.centered-box {
+    position: fixed; /* or absolute */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Add width, height, and styling as needed */
+  }
+  .progress {
+    width: 100%; /* Ensures the progress bar takes up the full width */
+    margin: 15px 0; /* Adjust spacing around the progress bar as needed */
+  }
+    

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+
+</head>
+<body>
+    <div id="flash-messages-popup" style="display: none;">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="flash-message alert alert-{{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div>
+    <form method="POST">
+        <h1>Login</h1>
+        <br>
+        {{ form.csrf_token }}
+        {{ form.email.label }}<br>
+        {{ form.email }}<br>
+        {{ form.password.label }}<br>
+        {{ form.password }}<br>
+        {{ form.submit }}
+        <br>
+    <a href="{{ url_for('signup') }}">Don't have an account? Sign up here</a>
+    <a href="{{ url_for('forget_password') }}">Forgot password?</a>
+    </form>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            let flashMessagesPopup = document.getElementById('flash-messages-popup');
+            if(flashMessagesPopup.innerHTML.trim() !== '') {
+                flashMessagesPopup.style.display = 'block'; // Show the popup if there are messages
+    
+                // Optional: Automatically hide after a few seconds
+                setTimeout(() => {
+                    flashMessagesPopup.style.display = 'none';
+                }, 5000);
+            }
+        });
+    </script>
+    
+</body>
+</html>
